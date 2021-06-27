@@ -18,7 +18,8 @@ const resolvers = {
         },
         users: async () => {
             return User.find()
-                .select('-__v -password')
+                .select('-__v')
+                // .select('-__v -password')
                 .populate('books');
         }
     },
@@ -45,6 +46,12 @@ const resolvers = {
 
             return { token, user };
         },
+        saveBook: async (_root, arg) => {
+
+        },
+        removeBook: async (_root, { bookId }) => {
+            
+        }
     }
 };
 

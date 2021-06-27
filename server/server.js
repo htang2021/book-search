@@ -5,6 +5,7 @@ const { ApolloServer } = require('apollo-server-express');
 // import typeDefs and resolvers
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+// const { authMiddleware } = require('./utils/auth');
 // const routes = require('./routes');  // commenting out - replaced by graphql
 
 const app = express();
@@ -13,7 +14,8 @@ const PORT = process.env.PORT || 6001;
 // Create a new Apollo server and pass in gql schema data
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  // context: authMiddleware
 });
 
 // integrate Apollo server with express app as middleware

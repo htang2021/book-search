@@ -27,6 +27,9 @@ const resolvers = {
         login: async (_root, { email, password }) => {
             const user = await User.findOne({ email });
 
+            console.log("+++++++++++++++++++++++++++++++++++++++");
+            console.log("Going through mutation here: " + email);
+            
             if (!user) {
                 throw new AuthenticationError('Incorrect credentials)');
             }
@@ -47,6 +50,18 @@ const resolvers = {
             return { token, user };
         },
         saveBook: async (_root, arg) => {
+            console.log(_root);
+            try {
+                const updatedUser = await User.findOneAndUpdate(
+                  { _id: user._id },
+                  { $addToSet: { savedBooks: body } },
+                  { new: true, runValidators: true }
+                );
+                return res.json(updatedUser);
+            } catch (err) {
+                console.log(err);
+                return res.status(400).json(err);
+            }
 
         },
         removeBook: async (_root, { bookId }) => {

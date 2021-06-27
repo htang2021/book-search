@@ -9,7 +9,7 @@ const db = require('./config/connection');
 // const routes = require('./routes');  // commenting out - replaced by graphql
 
 const app = express();
-const PORT = process.env.PORT || 6001;
+const PORT = process.env.PORT || 3001;
 
 // Create a new Apollo server and pass in gql schema data
 const server = new ApolloServer({

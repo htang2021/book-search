@@ -63,6 +63,5 @@ https://github.com/htang2021/book-search
 ## Deployed Live URL
 https://htang-booksearch.herokuapp.com/
 
-## Contact
 
 Updated by Hung Tang on 6/27/2021

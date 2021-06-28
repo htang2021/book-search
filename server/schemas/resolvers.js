@@ -18,17 +18,13 @@ const resolvers = {
         },
         users: async () => {
             return User.find()
-                .select('-__v')
-                // .select('-__v -password')
+                .select('-__v -password')
                 .populate('books');
         }
     },
     Mutation: {
         login: async (_root, { email, password }) => {
             const user = await User.findOne({ email });
-
-            console.log("+++++++++++++++++++++++++++++++++++++++");
-            console.log("Going through mutation here: " + email);
             
             if (!user) {
                 throw new AuthenticationError('Incorrect credentials)');
@@ -57,16 +53,30 @@ const resolvers = {
                   { $addToSet: { savedBooks: body } },
                   { new: true, runValidators: true }
                 );
-                return res.json(updatedUser);
+                
+                console.log("from saveBook function");
+                console.log(updatedUser);
+
+                return { updatedUser };
             } catch (err) {
                 console.log(err);
-                return res.status(400).json(err);
+                return { err };
             }
 
         },
         removeBook: async (_root, { bookId }) => {
-            
-        }
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: user._id },
+                { $pull: { savedBooks: { bookId: params.bookId } } },
+                { new: true }
+            );
+
+            console.log("from removeBook function");
+            console.log(updatedUser);
+
+            return { updatedUser };
+        },
+        
     }
 };
 

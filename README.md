@@ -2,7 +2,7 @@
 
 ## Project Summery
 
-take a fully functioning Google Books API search engine built with a RESTful API, and refactor it to be a GraphQL API built with Apollo Server.
+From a fully functioning Google Books API search engine built with a RESTful API, refactor it to be a GraphQL API built with Apollo Server.
 
 ## User Story
 
@@ -44,20 +44,20 @@ take a fully functioning Google Books API search engine built with a RESTful API
 
 ## Mock-up
 
-a user can type a search term (in this case, "star wars") in a search box and the results appear:  
-[Image 1]()
+User can type a search term (in this case, "star wars") in a search box and the results appear:  
+![](assets/images/21-mern-homework-demo-01.gif)
 
 The user can save books by clicking "Save This Book!" under each search result, as shown in the following animation:  
-[image 2]()
+![](assets/images/21-mern-homework-demo-02.gif)
 
-A user can view their saved books on a separate page, as shown in the following animation:  
-[image 3]()
+User can view their saved books on a separate page, as shown in the following animation:  
+![](assets/images/21-mern-homework-demo-03.gif)
 
 ## GitHub Repository
-
+https://github.com/htang2021/book-search
 
 ## Deployed Live URL
-
+https://htang-booksearch.herokuapp.com/
 
 ## Contact
 

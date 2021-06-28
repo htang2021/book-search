@@ -1,4 +1,4 @@
-# Book Search Engine Starter Code
+# Refactoring Book Search Engine with GraphQL
 
 ## Project Summery
 

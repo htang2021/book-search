@@ -42,13 +42,17 @@ From a fully functioning Google Books API search engine built with a RESTful API
 - WHEN I click on the Logout button
 - THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
 
-## Mock-up
+## Mock-up 1
 
 User can type a search term (in this case, "star wars") in a search box and the results appear:  
-![](assets/images/21-mern-homework-demo-01.gif)
+![](assets/images/21-mern-homework-demo-01.gif)  
+
+## Mock-up 2
 
 The user can save books by clicking "Save This Book!" under each search result, as shown in the following animation:  
-![](assets/images/21-mern-homework-demo-02.gif)
+![](assets/images/21-mern-homework-demo-02.gif)  
+
+## Mock-up 3
 
 User can view their saved books on a separate page, as shown in the following animation:  
 ![](assets/images/21-mern-homework-demo-03.gif)

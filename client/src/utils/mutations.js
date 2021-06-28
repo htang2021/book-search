@@ -44,5 +44,6 @@ export const REMOVE_BOOK = gql`
       email
       bookCount
       savedBooks
+    }
   }
 `;
